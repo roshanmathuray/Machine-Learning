@@ -4,14 +4,26 @@
 # In[1]:
 
 
+import streamlit as st
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import Birch
+from sklearn.mixture import GaussianMixture
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# Load dataset from local path (use raw string)
-file_path = r"C:\Users\ACER\marketing_campaign.csv"
-df = pd.read_csv(file_path, sep="\t")  # Adjust delimiter if needed
+# Streamlit Title
+st.title("Customer Identity and Brand Loyalty Clustering")
 
-# Display first few rows
-df.head()
+# Load your data
+file_path = "marketing_campaign.csv"
+df = pd.read_csv(file_path, sep="\t")
+
+# Show dataset preview
+st.write(df.head())
+
+# (Include the rest of your code here...)
 
 
 # In[2]:
