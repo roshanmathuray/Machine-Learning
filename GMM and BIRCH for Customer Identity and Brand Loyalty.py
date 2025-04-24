@@ -18,6 +18,10 @@ df = pd.read_csv(file_url)
 st.write("### Dataset Preview:")
 st.write(df.head())
 
+# Check for missing values in the dataset
+st.write("### Missing values in dataset:")
+st.write(df.isnull().sum())
+
 # Select relevant features for clustering
 identity_loyalty_features = [
     "Income", "Recency", "MntWines", "MntFruits", "MntMeatProducts", 
@@ -73,7 +77,6 @@ st.write(df_identity_loyalty_scaled.groupby("BIRCH_Cluster").mean())
 # Show GMM cluster statistics
 st.write("### Cluster Statistics (GMM Clustering):")
 st.write(df_identity_loyalty_scaled.groupby("GMM_Cluster").mean())
-
 
 
 
