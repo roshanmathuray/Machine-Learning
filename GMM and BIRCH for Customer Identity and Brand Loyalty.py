@@ -16,14 +16,9 @@ import seaborn as sns
 # Streamlit Title
 st.title("Customer Identity and Brand Loyalty Clustering")
 
-# Load your data
-file_path = "marketing_campaign.csv"
-df = pd.read_csv(file_path, sep="\t")
-
-# Show dataset preview
-st.write(df.head())
-
-# (Include the rest of your code here...)
+# Option 1: Load data from GitHub (Raw URL)
+file_url = "https://raw.githubusercontent.com/roshanmathuray/Machine-Learning/main/marketing_campaign.csv"
+df = pd.read_csv(file_url)
 
 
 # In[2]:
